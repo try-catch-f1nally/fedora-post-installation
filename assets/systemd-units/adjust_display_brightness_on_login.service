@@ -1,0 +1,9 @@
+[Unit]
+Description=Adjust the brightness of displays on user login
+
+[Service]
+ExecStart=/usr/local/bin/adjust_display_brightness_on_login.sh
+
+[Install]
+WantedBy=default.target
+

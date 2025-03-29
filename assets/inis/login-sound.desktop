@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Exec=aplay /usr/share/sounds/freedesktop/stereo/service-login.wav
+Name=Login Sound
+Comment=Play a sound at login
+Terminal=false
+OnlyShowIn=GNOME
+Type=Application
+StartupNotify=false
+X-GNOME-Autostart-enabled=true
+

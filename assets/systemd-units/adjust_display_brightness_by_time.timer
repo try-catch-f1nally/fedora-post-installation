@@ -1,0 +1,9 @@
+[Unit]
+Description=Adjust the brightness of displays at 18:00
+
+[Timer]
+OnCalendar=18:00
+
+[Install]
+WantedBy=timers.target
+

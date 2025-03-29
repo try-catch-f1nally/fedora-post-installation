@@ -1,0 +1,10 @@
+[Unit]
+Description=Adjust the brightness of RGB devices based on the current time
+
+[Service]
+ExecStart=/usr/local/bin/adjust_rgb_brightness_by_time.sh
+Type=oneshot
+
+[Install]
+WantedBy=default.target
+

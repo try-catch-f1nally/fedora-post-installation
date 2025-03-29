@@ -1,0 +1,7 @@
+[user]
+	name = Mykyta K
+	email = mykyta.k.as@agiliumlabs.com
+[core]
+	editor = vim
+[fetch]
+	prune = true

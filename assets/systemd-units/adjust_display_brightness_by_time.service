@@ -1,0 +1,11 @@
+[Unit]
+Description=Adjust the brightness of displays based on the current time
+
+[Service]
+ExecStartPre=/bin/sleep 5
+ExecStart=/usr/local/bin/adjust_display_brightness_by_time.sh
+Type=oneshot
+
+[Install]
+WantedBy=default.target
+

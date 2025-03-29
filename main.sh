@@ -40,13 +40,15 @@ gsettings set org.gnome.Ptyxis font-name 'MesloLGS NF 11'
 dconf write /org/gnome/Ptyxis/Profiles/$(gsettings get org.gnome.Ptyxis profile-uuids | tr -d "[]',")/palette "'gnome-with-white-font'"
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 sed -i 's|^ZSH_THEME=.*|ZSH_THEME="powerlevel10k/powerlevel10k"|' ~/.zshrc
 sed -i 's|^plugins=(.*)|plugins=(aws kubectl)|' ~/.zshrc
-
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
-echo -e '\nbindkey \^U backward-kill-line\nexport KUBE_EDITOR=vim' >> ~/.zshrc
+echo "
+source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+bindkey \^U backward-kill-line
+export KUBE_EDITOR=vim
+" >> ~/.zshrc
 
 
 cp $ASSETS_DIR/inis/.gitconfig ~/.gitconfig
@@ -87,7 +89,9 @@ cp $ASSETS_DIR/inis/org.telegram.desktop.desktop ~/.config/autostart/org.telegra
 
 sudo cp $ASSETS_DIR/scripts/toggle_ukrainian_input_source.sh /usr/local/bin/toggle_ukrainian_input_source.sh
 sudo chmod +x /usr/local/bin/toggle_ukrainian_input_source.sh
-# set shortcut
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name "'Toggle keyboard layouts'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command "'bash /usr/local/bin/toggle_ukrainian_input_source.sh'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding "'<Control><Alt>u'"
 
 
 echo Install theme for Telegram: https://t.me/addtheme/DarkShell

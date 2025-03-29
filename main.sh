@@ -87,10 +87,10 @@ cp $ASSETS_DIR/audios/service-login.wav /usr/share/sounds/freedesktop/stereo/ser
 cp $ASSETS_DIR/inis/login-sound.desktop ~/.config/autostart/login-sound.desktop
 cp $ASSETS_DIR/inis/org.telegram.desktop.desktop ~/.config/autostart/org.telegram.desktop.desktop
 
-sudo cp $ASSETS_DIR/scripts/toggle_ukrainian_input_source.sh /usr/local/bin/toggle_ukrainian_input_source.sh
-sudo chmod +x /usr/local/bin/toggle_ukrainian_input_source.sh
+sudo cp $ASSETS_DIR/scripts/toggle_keyboard_input_sources.sh /usr/local/bin/toggle_keyboard_input_sources.sh
+sudo chmod +x /usr/local/bin/toggle_keyboard_input_sources.sh
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name "'Toggle keyboard layouts'"
-dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command "'bash /usr/local/bin/toggle_ukrainian_input_source.sh'"
+dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command "'bash /usr/local/bin/toggle_keyboard_input_sources.sh'"
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding "'<Control><Alt>u'"
 
 

@@ -1,9 +1,12 @@
 cd ~
 set -e
-ASSETS_DIR="$(dirname $0)/assets"
+PROJECT_DIR="$(dirname $0)/assets"
 
 
-echo -e "max_parallel_downloads=10\ndefaultyes=True" | sudo tee -a /etc/dnf/dnf.conf
+echo "
+max_parallel_downloads=10
+defaultyes=True
+" | sudo tee -a /etc/dnf/dnf.conf
 
 sudo dnf remove -y gnome-abrt \
   gnome-calculator \
@@ -32,8 +35,8 @@ flatpak install -y flathub org.telegram.desktop com.github.ryonakano.reco
 
 # SET UP TERMINAL
 # https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#getting-started
-cp -r $ASSETS_DIR/fonts/* ~/.local/share/fonts
-cp $ASSETS_DIR/inis/gnome-with-white-font.palette ~/.local/share/org.gnome.Ptyxis/palettes/gnome-with-white-font.palette
+cp -r $PROJECT_DIR/fonts/* ~/.local/share/fonts
+cp $PROJECT_DIR/inis/gnome-with-white-font.palette ~/.local/share/org.gnome.Ptyxis/palettes/gnome-with-white-font.palette
 fc-cache
 gsettings set org.gnome.Ptyxis use-system-font false
 gsettings set org.gnome.Ptyxis font-name 'MesloLGS NF 11'
@@ -51,7 +54,7 @@ export KUBE_EDITOR=vim
 " >> ~/.zshrc
 
 
-cp $ASSETS_DIR/inis/.gitconfig ~/.gitconfig
+cp $PROJECT_DIR/inis/.gitconfig ~/.gitconfig
 echo -e "\nset expandtab\nset tabstop=2\nset shiftwidth=2" | sudo tee -a /etc/vimrc
 
 
@@ -83,11 +86,11 @@ gsettings set org.gnome.Weather locations "[$KYIV_LOCATION]"
 timedatectl set-timezone Europe/Kyiv
 
 
-cp $ASSETS_DIR/audios/service-login.wav /usr/share/sounds/freedesktop/stereo/service-login.wav 
-cp $ASSETS_DIR/inis/login-sound.desktop ~/.config/autostart/login-sound.desktop
-cp $ASSETS_DIR/inis/org.telegram.desktop.desktop ~/.config/autostart/org.telegram.desktop.desktop
+cp $PROJECT_DIR/audios/service-login.wav /usr/share/sounds/freedesktop/stereo/service-login.wav 
+cp $PROJECT_DIR/inis/login-sound.desktop ~/.config/autostart/login-sound.desktop
+cp $PROJECT_DIR/inis/org.telegram.desktop.desktop ~/.config/autostart/org.telegram.desktop.desktop
 
-sudo cp $ASSETS_DIR/scripts/toggle_keyboard_input_sources.sh /usr/local/bin/toggle_keyboard_input_sources.sh
+sudo cp $PROJECT_DIR/scripts/toggle_keyboard_input_sources.sh /usr/local/bin/toggle_keyboard_input_sources.sh
 sudo chmod +x /usr/local/bin/toggle_keyboard_input_sources.sh
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name "'Toggle keyboard layouts'"
 dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command "'bash /usr/local/bin/toggle_keyboard_input_sources.sh'"

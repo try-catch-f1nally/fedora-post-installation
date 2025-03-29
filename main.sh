@@ -1,11 +1,12 @@
 cd ~
 set -e
-PROJECT_DIR="$(dirname $0)/assets"
+PROJECT_DIR=$(dirname $0)
 
 
 echo "
 max_parallel_downloads=10
 defaultyes=True
+keepcache=True
 " | sudo tee -a /etc/dnf/dnf.conf
 
 sudo dnf remove -y gnome-abrt \
@@ -92,9 +93,12 @@ cp $PROJECT_DIR/inis/org.telegram.desktop.desktop ~/.config/autostart/org.telegr
 
 sudo cp $PROJECT_DIR/scripts/toggle_keyboard_input_sources.sh /usr/local/bin/toggle_keyboard_input_sources.sh
 sudo chmod +x /usr/local/bin/toggle_keyboard_input_sources.sh
-dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/name "'Toggle keyboard layouts'"
-dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/command "'bash /usr/local/bin/toggle_keyboard_input_sources.sh'"
-dconf write /org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/binding "'<Control><Alt>u'"
 
+CUSTOM0_BINDING_PATH=/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/
+gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['$CUSTOM0_BINDING_PATH']"
+dconf write ${CUSTOM0_BINDING_PATH}name "'Toggle keyboard layouts'"
+dconf write ${CUSTOM0_BINDING_PATH}command "'bash /usr/local/bin/toggle_keyboard_input_sources.sh'"
+dconf write ${CUSTOM0_BINDING_PATH}binding "'<Control><Alt>u'"
 
+echo All done.
 echo Install theme for Telegram: https://t.me/addtheme/DarkShell

@@ -1,0 +1,17 @@
+Ctrl + K - Delete to Line End
+Ctrl + U - Delete to Line Start
+Ctrl + W - Delete to Word Start
+Ctrl + E - Move Caret to Line End
+Ctrl + A - Move Caret to Line Start
+Home - Move Caret to Text Start
+End - Move Caret to Text End
+Ctrl + Shift + P - Manage Projects
+Ctrl + Alt + A - Select All
+Ctrl + L - Extend Selection
+Ctrl + Shift + L - Shrink Selection
+Ctrl + Alt + Left - Back
+Ctrl + Alt + Right - Forward
+Ctrl + Alt + Down - Move Line Down
+Ctrl + Alt + Up - Move Line Up
+Alt + N - New
+

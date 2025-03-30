@@ -72,6 +72,8 @@ gsettings set org.gnome.desktop.screensaver lock-enabled true
 gsettings set org.gnome.desktop.screensaver lock-delay 0
 gsettings set org.gnome.desktop.search-providers disable-external true
 gsettings set org.gnome.desktop.session idle-delay 900
+gsettings set org.gnome.desktop.wm.keybindings begin-move '[]'
+gsettings set org.gnome.desktop.wm.keybindings begin-resize '[]'
 gsettings set org.gnome.desktop.wm.keybindings cycle-group "[]"
 gsettings set org.gnome.desktop.wm.keybindings cycle-group-backward "[]"
 gsettings set org.gnome.desktop.wm.keybindings cycle-panels "[]"
@@ -81,6 +83,7 @@ gsettings set org.gnome.desktop.wm.keybindings cycle-windows-backward "[]"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-1 "[]"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-last "[]"
 gsettings set org.gnome.desktop.wm.keybindings panel-run-dialog "[]"
+gsettings set org.gnome.desktop.wm.keybindings toggle-maximized "[]"
 gsettings set org.gnome.desktop.wm.keybindings show-desktop "['<Super>d']"
 gsettings set org.gnome.desktop.wm.keybindings switch-applications "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "[]"

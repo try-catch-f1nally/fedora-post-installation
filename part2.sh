@@ -20,7 +20,8 @@ set shiftwidth=2
 " | sudo tee -a /etc/vimrc
 
 
-cp $PROJECT_DIR/images/rocket-3440-1440.png ~/.local/share/backgrounds/2025-01-01-00-00-00-rocket-3440-1440.png
+mkdir -p ~/.local/share/backgrounds
+cp $PROJECT_DIR/images/rocket-3440x1440.png ~/.local/share/backgrounds/2025-01-01-00-00-00-rocket-3440x1440.png
 gsettings set org.gnome.desktop.background picture-uri 'file:///home/try_catch_finally/.local/share/backgrounds/2025-01-01-00-00-00-rocket-3440-1440.png'
 gsettings set org.gnome.desktop.background picture-uri-dark 'file:///home/try_catch_finally/.local/share/backgrounds/2025-01-01-00-00-00-rocket-3440-1440.png'
 gsettings set org.gnome.desktop.background primary-color '#000000000000'

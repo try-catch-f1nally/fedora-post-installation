@@ -38,7 +38,7 @@ fc-cache
 gsettings set org.gnome.Ptyxis use-system-font false
 dconf write /org/gnome/Ptyxis/Profiles/$(gsettings get org.gnome.Ptyxis profile-uuids | tr -d "[]',")/palette "'gnome-white-font'"
 
-xclip -selection clipboard <<< 'export SHELL=/usr/bin/zsh && 
+xclip -selection clipboard <<< 'SHELL=/usr/bin/zsh && 
   gsettings set org.gnome.Ptyxis font-name "MesloLGS NF 11" && 
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
 

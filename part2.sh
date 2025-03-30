@@ -6,7 +6,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-
 sed -i 's|^ZSH_THEME=.*|ZSH_THEME="powerlevel10k/powerlevel10k"|' ~/.zshrc
 sed -i 's|^plugins=(.*)|plugins=(aws kubectl)|' ~/.zshrc
 echo "
-source ${(q-)PWD}/.oh-my-zsh/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.oh-my-zsh/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 bindkey \^U backward-kill-line
 export KUBE_EDITOR=vim
 " >> ~/.zshrc

@@ -80,6 +80,7 @@ gsettings set org.gnome.desktop.wm.keybindings cycle-windows "[]"
 gsettings set org.gnome.desktop.wm.keybindings cycle-windows-backward "[]"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-1 "[]"
 gsettings set org.gnome.desktop.wm.keybindings move-to-workspace-last "[]"
+gsettings set org.gnome.desktop.wm.keybindings panel-run-dialog "[]"
 gsettings set org.gnome.desktop.wm.keybindings show-desktop "['<Super>d']"
 gsettings set org.gnome.desktop.wm.keybindings switch-applications "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-applications-backward "[]"
@@ -97,6 +98,7 @@ gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward "['<Shift><Alt>Tab']"
 gsettings set org.gnome.mutter center-new-windows true
 gsettings set org.gnome.mutter workspaces-only-on-primary false
+gsettings set org.gnome.mutter.wayland.keybindings restore-shortcuts '[]'
 gsettings set org.gnome.settings-daemon.plugins.media-keys control-center "['<Super>i']"
 gsettings set org.gnome.settings-daemon.plugins.media-keys help '[]'
 gsettings set org.gnome.settings-daemon.plugins.media-keys home "['<Super>e']"

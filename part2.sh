@@ -87,6 +87,7 @@ gsettings set org.gnome.Weather locations "[$KYIV_LOCATION]"
 timedatectl set-timezone Europe/Kyiv
 
 
+mkdir -p ~/.config/autostart
 sudo cp $PROJECT_DIR/audios/service-login.wav /usr/share/sounds/freedesktop/stereo/service-login.wav 
 cp $PROJECT_DIR/inis/login-sound.desktop ~/.config/autostart/login-sound.desktop
 cp $PROJECT_DIR/inis/org.telegram.desktop.desktop ~/.config/autostart/org.telegram.desktop.desktop

@@ -101,10 +101,10 @@ dconf write ${CUSTOM0_BINDING_PATH}name "'Toggle keyboard layouts'"
 dconf write ${CUSTOM0_BINDING_PATH}command "'bash /usr/local/bin/toggle_keyboard_input_sources.sh'"
 dconf write ${CUSTOM0_BINDING_PATH}binding "'<Control><Alt>u'"
 
-p10k configure
 
 echo -e "\033[1;33m
 All almost done. Finish the post installation:
+  - restart the terminal to configure powerlevel10k theme;
   - run pc.sh to adjust configuration for PC;
   - set https://t.me/addtheme/DarkShell theme for Telegram;
   - install and configure gnome extensions;

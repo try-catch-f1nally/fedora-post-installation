@@ -28,8 +28,20 @@ sudo dnf remove -y gnome-abrt \
 sudo dnf autoremove -y
 sudo dnf upgrade -y
 
-sudo dnf install -y vim zsh xclip google-chrome-stable vlc kolourpaint
+sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+sudo dnf install -y \
+  vim \
+  zsh \
+  xclip \
+  google-chrome-stable \
+  vlc \
+  kolourpaint \
+  docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
 flatpak install -y flathub org.telegram.desktop com.github.ryonakano.reco
+
+sudo usermod -aG docker $USER
+sudo systemctl enable --now docker
 
 mkdir -p ~/.local/share/fonts
 cp -r $PROJECT_DIR/fonts/* ~/.local/share/fonts

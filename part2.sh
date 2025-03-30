@@ -106,6 +106,8 @@ echo -e "\033[1;33m
 All almost done. Finish the post installation:
   - restart the terminal to configure powerlevel10k theme;
   - run pc.sh to adjust configuration for PC;
+  - set profile picutre fot the user in the Settings;
+  - log in to google account in Gnome;
   - set https://t.me/addtheme/DarkShell theme for Telegram;
   - install and configure gnome extensions;
   - install and configure JetBrains ToolBox and WebStorm;

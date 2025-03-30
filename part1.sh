@@ -28,7 +28,7 @@ sudo dnf remove -y gnome-abrt \
 sudo dnf autoremove -y
 sudo dnf upgrade -y
 
-sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo
+sudo dnf config-manager addrepo --from-repofile https://download.docker.com/linux/fedora/docker-ce.repo
 sudo dnf install -y \
   vim \
   zsh \

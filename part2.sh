@@ -1,49 +1,3 @@
-cd ~
-set -e
-PROJECT_DIR=$(dirname $0)
-
-
-echo "
-max_parallel_downloads=10
-defaultyes=True
-keepcache=True
-" | sudo tee -a /etc/dnf/dnf.conf
-
-sudo dnf remove -y gnome-abrt \
-  gnome-calculator \
-  gnome-connections \
-  gnome-contacts \
-  gnome-logs \
-  gnome-text-editor \
-  gnome-tour \
-  rhythmbox \
-  simple-scan \
-  evince \
-  firefox \
-  libreoffice-core \
-  libreoffice-calc \
-  libreoffice-impress \
-  libreoffice-writter \
-  snapshot \
-  totem
-
-sudo dnf autoremove -y
-sudo dnf upgrade -y
-
-sudo dnf install -y vim zsh xclip google-chrome-stable vlc kolourpaint
-flatpak install -y flathub org.telegram.desktop com.github.ryonakano.reco
-
-
-# SET UP TERMINAL
-# https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#getting-started
-cp -r $PROJECT_DIR/fonts/* ~/.local/share/fonts
-cp $PROJECT_DIR/inis/gnome-with-white-font.palette ~/.local/share/org.gnome.Ptyxis/palettes/gnome-with-white-font.palette
-fc-cache
-gsettings set org.gnome.Ptyxis use-system-font false
-gsettings set org.gnome.Ptyxis font-name 'MesloLGS NF 11'
-dconf write /org/gnome/Ptyxis/Profiles/$(gsettings get org.gnome.Ptyxis profile-uuids | tr -d "[]',")/palette "'gnome-with-white-font'"
-
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 sed -i 's|^ZSH_THEME=.*|ZSH_THEME="powerlevel10k/powerlevel10k"|' ~/.zshrc
@@ -138,5 +92,10 @@ dconf write ${CUSTOM0_BINDING_PATH}name "'Toggle keyboard layouts'"
 dconf write ${CUSTOM0_BINDING_PATH}command "'bash /usr/local/bin/toggle_keyboard_input_sources.sh'"
 dconf write ${CUSTOM0_BINDING_PATH}binding "'<Control><Alt>u'"
 
-echo All done.
-echo Install theme for Telegram: https://t.me/addtheme/DarkShell
+echo "All done.
+Now all that's left is:
+  - set https://t.me/addtheme/DarkShell theme for Telegram;
+  - install and configure gnome extensions;
+  - install and configure JetBrains ToolBox and WebStorm;
+  - install Chrome PWAs;
+  - pin necessary apps to dash."

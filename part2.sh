@@ -1,3 +1,6 @@
+set -e
+PROJECT_DIR=$(dirname $0)
+
 git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/.zsh-syntax-highlighting
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 sed -i 's|^ZSH_THEME=.*|ZSH_THEME="powerlevel10k/powerlevel10k"|' ~/.zshrc
@@ -10,7 +13,11 @@ export KUBE_EDITOR=vim
 
 
 cp $PROJECT_DIR/inis/.gitconfig ~/.gitconfig
-echo -e "\nset expandtab\nset tabstop=2\nset shiftwidth=2" | sudo tee -a /etc/vimrc
+echo "
+set expandtab
+set tabstop=2
+set shiftwidth=2
+" | sudo tee -a /etc/vimrc
 
 
 cp $PROJECT_DIR/images/rocket-3440-1440.png ~/.local/share/backgrounds/2025-01-01-00-00-00-rocket-3440-1440.png
@@ -92,10 +99,13 @@ dconf write ${CUSTOM0_BINDING_PATH}name "'Toggle keyboard layouts'"
 dconf write ${CUSTOM0_BINDING_PATH}command "'bash /usr/local/bin/toggle_keyboard_input_sources.sh'"
 dconf write ${CUSTOM0_BINDING_PATH}binding "'<Control><Alt>u'"
 
-echo "All done.
-Now all that's left is:
+echo -e "\033[1;33m
+All almost done. Finish the post installation:
+  - run pc.sh to adjust configuration for PC;
   - set https://t.me/addtheme/DarkShell theme for Telegram;
   - install and configure gnome extensions;
   - install and configure JetBrains ToolBox and WebStorm;
   - install Chrome PWAs;
-  - pin necessary apps to dash."
+  - pin necessary apps to dash.
+\033[0m"
+

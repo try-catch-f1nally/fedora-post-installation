@@ -1,4 +1,3 @@
-cd ~
 set -e
 PROJECT_DIR=$(dirname $0)
 

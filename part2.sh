@@ -22,8 +22,8 @@ set shiftwidth=2
 
 mkdir -p ~/.local/share/backgrounds
 cp $PROJECT_DIR/images/rocket-3440x1440.png ~/.local/share/backgrounds/2025-01-01-00-00-00-rocket-3440x1440.png
-gsettings set org.gnome.desktop.background picture-uri 'file:///home/try_catch_finally/.local/share/backgrounds/2025-01-01-00-00-00-rocket-3440-1440.png'
-gsettings set org.gnome.desktop.background picture-uri-dark 'file:///home/try_catch_finally/.local/share/backgrounds/2025-01-01-00-00-00-rocket-3440-1440.png'
+gsettings set org.gnome.desktop.background picture-uri 'file:///home/try_catch_finally/.local/share/backgrounds/2025-01-01-00-00-00-rocket-3440x1440.png'
+gsettings set org.gnome.desktop.background picture-uri-dark 'file:///home/try_catch_finally/.local/share/backgrounds/2025-01-01-00-00-00-rocket-3440x1440.png'
 gsettings set org.gnome.desktop.background primary-color '#000000000000'
 gsettings set org.gnome.desktop.background secondary-color '#000000000000'
 
@@ -100,6 +100,8 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "[
 dconf write ${CUSTOM0_BINDING_PATH}name "'Toggle keyboard layouts'"
 dconf write ${CUSTOM0_BINDING_PATH}command "'bash /usr/local/bin/toggle_keyboard_input_sources.sh'"
 dconf write ${CUSTOM0_BINDING_PATH}binding "'<Control><Alt>u'"
+
+p10k configure
 
 echo -e "\033[1;33m
 All almost done. Finish the post installation:

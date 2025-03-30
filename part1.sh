@@ -42,12 +42,14 @@ xclip -selection clipboard <<< 'SHELL=/usr/bin/zsh &&
   gsettings set org.gnome.Ptyxis font-name "MesloLGS NF 11" && 
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
 
-echo 'Part1 almost done. Now:
-  - enter your password to change user shell;
+echo -e "\033[1;33m
+part1.sh almost done. Now:
+  - enter your password to change user shell (run chsh -s /usr/bin/zsh if you fail);
   - execute the command from clipboard;
+  - restart a terminal;
   - run part2.sh to proceed.
-'
+\033[0m"
+
 
 chsh -s /usr/bin/zsh
-
 

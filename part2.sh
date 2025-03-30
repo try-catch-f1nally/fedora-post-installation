@@ -85,6 +85,7 @@ gsettings set org.gnome.shell.world-clocks locations "[$REYKJAVIK_LOCATION]"
 gsettings set org.gnome.system.locale region 'en_GB.UTF-8'
 gsettings set org.gnome.Weather locations "[$KYIV_LOCATION]"
 timedatectl set-timezone Europe/Kyiv
+localectl set-locale LC_TIME=en_GB.UTF-8
 
 
 mkdir -p ~/.config/autostart

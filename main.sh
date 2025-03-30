@@ -59,6 +59,13 @@ cp $PROJECT_DIR/inis/.gitconfig ~/.gitconfig
 echo -e "\nset expandtab\nset tabstop=2\nset shiftwidth=2" | sudo tee -a /etc/vimrc
 
 
+cp $PROJECT_DIR/images/rocket-3440-1440.png ~/.local/share/backgrounds/2025-01-01-00-00-00-rocket-3440-1440.png
+gsettings set org.gnome.desktop.background picture-uri 'file:///home/try_catch_finally/.local/share/backgrounds/2025-01-01-00-00-00-rocket-3440-1440.png'
+gsettings set org.gnome.desktop.background picture-uri-dark 'file:///home/try_catch_finally/.local/share/backgrounds/2025-01-01-00-00-00-rocket-3440-1440.png'
+gsettings set org.gnome.desktop.background primary-color '#000000000000'
+gsettings set org.gnome.desktop.background secondary-color '#000000000000'
+
+
 REYKJAVIK_LOCATION="<(uint32 2, <('Reykjavík', 'BIRK', true, [(1.1193378211279323, -0.38222710618675809)], [(1.1196287151543625, -0.38309977081275531)])>)>"
 KYIV_LOCATION="<(uint32 2, <('Kyiv', 'UKKK', true, [(0.87967503764377286, 0.53148185187090402)], [(0.88022771360470919, 0.53261631588470038)])>)>"
 gsettings set org.gnome.clocks world-clocks "[{'location': $REYKJAVIK_LOCATION}]"

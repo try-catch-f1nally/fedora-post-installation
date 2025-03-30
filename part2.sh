@@ -1,9 +1,9 @@
-git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git
+git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/.zsh-syntax-highlighting
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
 sed -i 's|^ZSH_THEME=.*|ZSH_THEME="powerlevel10k/powerlevel10k"|' ~/.zshrc
 sed -i 's|^plugins=(.*)|plugins=(aws kubectl)|' ~/.zshrc
 echo "
-source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ${(q-)PWD}/.oh-my-zsh/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 bindkey \^U backward-kill-line
 export KUBE_EDITOR=vim
 " >> ~/.zshrc

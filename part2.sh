@@ -11,7 +11,6 @@ bindkey \^U backward-kill-line
 export KUBE_EDITOR=vim
 " >> ~/.zshrc
 
-
 cp $PROJECT_DIR/inis/.gitconfig ~/.gitconfig
 echo "
 set expandtab
@@ -19,14 +18,12 @@ set tabstop=2
 set shiftwidth=2
 " | sudo tee -a /etc/vimrc
 
-
 mkdir -p ~/.local/share/backgrounds
 cp $PROJECT_DIR/images/rocket-3440x1440.png ~/.local/share/backgrounds/2025-01-01-00-00-00-rocket-3440x1440.png
 gsettings set org.gnome.desktop.background picture-uri 'file:///home/try_catch_finally/.local/share/backgrounds/2025-01-01-00-00-00-rocket-3440x1440.png'
 gsettings set org.gnome.desktop.background picture-uri-dark 'file:///home/try_catch_finally/.local/share/backgrounds/2025-01-01-00-00-00-rocket-3440x1440.png'
 gsettings set org.gnome.desktop.background primary-color '#000000000000'
 gsettings set org.gnome.desktop.background secondary-color '#000000000000'
-
 
 REYKJAVIK_LOCATION="<(uint32 2, <('Reykjavík', 'BIRK', true, [(1.1193378211279323, -0.38222710618675809)], [(1.1196287151543625, -0.38309977081275531)])>)>"
 KYIV_LOCATION="<(uint32 2, <('Kyiv', 'UKKK', true, [(0.87967503764377286, 0.53148185187090402)], [(0.88022771360470919, 0.53261631588470038)])>)>"
@@ -87,7 +84,6 @@ gsettings set org.gnome.Weather locations "[$KYIV_LOCATION]"
 timedatectl set-timezone Europe/Kyiv
 localectl set-locale LC_TIME=en_GB.UTF-8
 
-
 mkdir -p ~/.config/autostart
 sudo cp $PROJECT_DIR/audios/service-login.wav /usr/share/sounds/freedesktop/stereo/service-login.wav 
 cp $PROJECT_DIR/inis/login-sound.desktop ~/.config/autostart/login-sound.desktop
@@ -107,13 +103,12 @@ echo -e "\033[1;33m
 All almost done. Finish the post installation:
   - restart the terminal to configure powerlevel10k theme;
   - run pc.sh to adjust configuration for PC;
-  - set profile picutre fot the user in the Settings;
-  - log in to google account in Gnome;
+  - set profile picture fot the user in the Settings;
+  - log in to Google account in Gnome;
   - set https://t.me/addtheme/DarkShell theme for Telegram;
   - install and configure gnome extensions;
-  - install and configure JetBrains ToolBox and WebStorm;
   - install Chrome PWAs;
-  - install Hubstaff;
-  - pin necessary apps to dash.
+  - pin necessary apps to dash;
+  - install and configure Hubstaff, JetBrains ToolBox and WebStorm.
 \033[0m"
 

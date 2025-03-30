@@ -78,6 +78,13 @@ gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Supe
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Super>Page_Down']"
 gsettings set org.gnome.mutter center-new-windows true
 gsettings set org.gnome.mutter workspaces-only-on-primary false
+gsettings set org.gnome.settings-daemon.plugins.media-keys control-center "['<Super>i']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys help '[]'
+gsettings set org.gnome.settings-daemon.plugins.media-keys home "['<Super>e']"
+gsettings set org.gnome.settings-daemon.plugins.media-keys magnifier '[]'
+gsettings set org.gnome.settings-daemon.plugins.media-keys magnifier-zoom-in '[]'
+gsettings set org.gnome.settings-daemon.plugins.media-keys magnifier-zoom-out '[]'
+gsettings set org.gnome.settings-daemon.plugins.media-keys screenreader '[]'
 gsettings set org.gnome.settings-daemon.plugins.power power-button-action interactive
 gsettings set org.gnome.shell.app-switcher current-workspace-only true
 gsettings set org.gnome.shell.weather locations "[$KYIV_LOCATION]"

@@ -40,10 +40,9 @@ cp -r $PROJECT_DIR/fonts/* ~/.local/share/fonts
 cp $PROJECT_DIR/inis/gnome-with-white-font.palette ~/.local/share/org.gnome.Ptyxis/palettes/gnome-with-white-font.palette
 fc-cache
 gsettings set org.gnome.Ptyxis use-system-font false
-gsettings set org.gnome.Ptyxis font-name 'MesloLGS NF 11'
 dconf write /org/gnome/Ptyxis/Profiles/$(gsettings get org.gnome.Ptyxis profile-uuids | tr -d "[]',")/palette "'gnome-with-white-font'"
 chsh -s /usr/bin/zsh
 export SHELL=/usr/bin/zsh
 echo Now execute the command below and run part2.sh
-echo 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
+echo 'gsettings set org.gnome.Ptyxis font-name "MesloLGS NF 11" && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"'
 

@@ -1,0 +1,21 @@
+- AppIndicator and KStatusNotifierItem Support 
+  https://extensions.gnome.org/extension/615/appindicator-support
+
+- Blur my Shell
+  https://extensions.gnome.org/extension/3193/blur-my-shell
+
+- Clipboard Indicator
+  https://extensions.gnome.org/extension/779/clipboard-indicator
+
+- Disable Menu Switching
+  https://extensions.gnome.org/extension/4133/disable-menu-switching
+
+- Status Area Horizontal Spacing
+  https://extensions.gnome.org/extension/355/status-area-horizontal-spacing
+
+- Vitals
+  https://extensions.gnome.org/extension/1460/vitals
+
+- Window Is Ready - Notification Remover
+  https://extensions.gnome.org/extension/1007/window-is-ready-notification-remover
+

@@ -112,6 +112,7 @@ All almost done. Finish the post installation:
   - install and configure gnome extensions;
   - install and configure JetBrains ToolBox and WebStorm;
   - install Chrome PWAs;
+  - install Hubstaff;
   - pin necessary apps to dash.
 \033[0m"
 

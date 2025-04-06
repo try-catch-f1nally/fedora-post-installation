@@ -2,7 +2,7 @@
 
 HOUR=$(date +"%H")
 
-if [ "$HOUR" -lt 18 ]; then
+if [ "$HOUR" -gt 5 ] && [ "$HOUR" -lt 19 ]; then
   openrgb -b 0
 else
   openrgb -b 20

@@ -87,7 +87,7 @@ localectl set-locale LC_TIME=en_GB.UTF-8
 mkdir -p ~/.config/autostart
 sudo cp $PROJECT_DIR/audios/service-login.wav /usr/share/sounds/freedesktop/stereo/service-login.wav 
 cp $PROJECT_DIR/inis/login-sound.desktop ~/.config/autostart/login-sound.desktop
-cp $PROJECT_DIR/inis/org.telegram.desktop.desktop ~/.config/autostart/org.telegram.desktop.desktop
+cp $PROJECT_DIR/inis/org.telegram.desktop ~/.config/autostart/org.telegram.desktop
 
 sudo cp $PROJECT_DIR/scripts/toggle_keyboard_input_sources.sh /usr/local/bin/toggle_keyboard_input_sources.sh
 sudo chmod +x /usr/local/bin/toggle_keyboard_input_sources.sh

@@ -6,7 +6,7 @@ Ctrl + A - Move Caret to Line Start
 Home - Move Caret to Text Start
 End - Move Caret to Text End
 Ctrl + Shift + P - Manage Projects
-Ctrl + Alt + A - Select All
+Ctrl + ; - Select All
 Ctrl + L - Extend Selection
 Ctrl + Shift + L - Shrink Selection
 Ctrl + Alt + Left - Back

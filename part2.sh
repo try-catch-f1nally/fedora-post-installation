@@ -60,9 +60,11 @@ gsettings set org.gnome.desktop.wm.keybindings switch-input-source-backward "['<
 gsettings set org.gnome.desktop.wm.keybindings switch-panels "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-panels-backward "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-1 "[]"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-last "[]"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-left "['<Super>Page_Up', '<Super><Alt>Left']"
 gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-right "['<Super>Page_Down', '<Super><Alt>Right']"
+gsettings set org.gnome.desktop.wm.keybindings switch-to-workspace-down '[]'
 gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"
 gsettings set org.gnome.desktop.wm.keybindings switch-windows-backward "['<Shift><Alt>Tab']"
 gsettings set org.gnome.mutter center-new-windows true
